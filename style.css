@@ -1,0 +1,110 @@
+.page {
+  background: #b99470;
+}
+
+.page__content {
+  min-height: 100vh;
+}
+
+.nav__bar_section {
+  display: flex;
+  justify-content: end;
+  margin: 20px 20px 10px;
+}
+
+.nav__bar {
+  background-color: #fff;
+  padding: 10px 10px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: width 0.5s linear;
+}
+
+.nav__bar.active {
+  width: 290px;
+}
+
+.nav__list {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 0;
+  transition: width 0.6s linear;
+}
+
+.nav__bar.active .nav__list {
+  width: 100%;
+}
+
+.nav__bar .nav__list .nav__list_item {
+  transform: rotateY(0deg);
+  opacity: 0;
+  transition: transform 0.6s linear, opacity 0.6s linear;
+}
+
+.nav__bar.active .nav__list .nav__list_item {
+  transform: rotateY(360deg);
+  opacity: 1;
+}
+
+.nav__bar .nav__list .nav__link {
+  text-decoration: none;
+  color: #d37676;
+  position: relative;
+  margin: 0px 10px;
+}
+
+.icon {
+  background-color: #fff;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+  position: relative;
+  height: 30px;
+  width: 30px;
+}
+
+.icon:focus {
+  outline: none;
+}
+
+.icon .line {
+  background-color: #b99470;
+  height: 2px;
+  width: 20px;
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  transition: transform 0.6s linear;
+}
+
+.icon .line2 {
+  top: auto;
+  bottom: 10px;
+}
+
+.nav__bar.active .icon .line1 {
+  transform: rotate(-765deg) translateY(5.5px);
+}
+
+.nav__bar.active .icon .line2 {
+  transform: rotate(765deg) translateY(-5.5px);
+}
+
+.home__content {
+  display: flex;
+  justify-content: center;
+  background-image: url(./images/damaris1.JPG);
+  background-size: cover;
+  padding: 100px;
+}
+.home__background {
+  height: 300px;
+  padding: 100px 0px;
+  margin: 0;
+}
